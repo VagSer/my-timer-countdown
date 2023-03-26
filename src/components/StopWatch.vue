@@ -87,11 +87,11 @@ watch(
         </div>
         <div class="Buttons">
             <button class="Button" @click="isWorking=!isWorking">
-                <span v-if="!isWorking">▶</span>
-                <span v-else>||</span>
+                <i v-if="!isWorking" class="fa fa-play"></i>
+                <i v-else class="fa fa-pause"></i>
             </button>
             <button class="Button" @click="resetTimer">
-                ■
+                <i class="fa fa-stop"></i>
             </button>
         </div>
     </div>
