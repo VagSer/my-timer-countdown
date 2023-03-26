@@ -18,15 +18,15 @@ const showMinutes = computed(() => {
     if (minutes.value === 0 && hours.value === 0)
         return ''
     else if (minutes.value < 10)
-        return `0${minutes.value} : `
-    else return `${minutes.value} : `
+        return `0${minutes.value} `
+    else return `${minutes.value} `
 })
 
 const showHours = computed(() => {
     if (hours.value === 0)
         return ''
     else if (hours.value < 10)
-        return `0${hours.value} : `
+        return `0${hours.value} `
     else return `${hours.value}`
 })
 
@@ -38,7 +38,11 @@ const workingClass = computed(() => {
 const updateTimer = () => {
     if (seconds.value === 59) {
         seconds.value = 0
-        minutes.value++
+        if (minutes.value === 59) {
+            minutes.value = 0
+            hours.value++
+        }
+        else minutes.value++
     }
     else seconds.value++
 }
@@ -54,7 +58,7 @@ watch(
     () => isWorking.value,
     () => {
         if (isWorking.value == true) {
-            updating.value = setInterval(updateTimer, 1000)
+            updating.value = setInterval(updateTimer, 100)
         }
         else clearInterval(updating.value)
     }
