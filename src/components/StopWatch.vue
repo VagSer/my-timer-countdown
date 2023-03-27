@@ -100,15 +100,13 @@ watch(
 <style scoped>
 
 .Stopwatch {
-    min-width: 225px;
+    width: 225px;
     height: 120px;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: #696969;
     color: #9E9E9E;
-    margin: 10px 2rem;
 }
 .Separator {
     margin: 5px;
