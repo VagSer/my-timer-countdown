@@ -58,7 +58,7 @@ watch(
     () => isWorking.value,
     () => {
         if (isWorking.value == true) {
-            updating.value = setInterval(updateTimer, 100)
+            updating.value = setInterval(updateTimer, 1000)
         }
         else clearInterval(updating.value)
     }
@@ -100,7 +100,7 @@ watch(
 <style scoped>
 
 .Stopwatch {
-    width: 225px;
+    min-width: 225px;
     height: 120px;
     position: relative;
     display: flex;
@@ -108,7 +108,7 @@ watch(
     justify-content: space-between;
     background: #696969;
     color: #9E9E9E;
-    margin: 10px auto;
+    margin: 10px 2rem;
 }
 .Separator {
     margin: 5px;
