@@ -18,21 +18,26 @@ const timers = ref([1])
 .App {
   display: flex;
   width: min(100%, 1024px);
-  border: 1px solid blue;
   margin: 0 auto;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .addButton {
-  width: 225px;
+  min-width: 225px;
   height: 120px;
   background: #696969;
   border: none;
   color: #9E9E9E;
   font-size: 2rem;
-  margin: 10px auto;
+  margin: 10px 2rem;
 }
 .addButton:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  .App {
+    width: min(100%, 768px);
+  }
 }
 </style>
