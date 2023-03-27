@@ -25,6 +25,7 @@ const timers = ref([1])
 }
 .addButton {
   height: 120px;
+  width: 225px;
   background: #696969;
   border: none;
   color: #9E9E9E;
