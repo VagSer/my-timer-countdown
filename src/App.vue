@@ -17,8 +17,10 @@ const timers = ref([1])
 <style>
 .App {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  width: min(100%, 1024px);
+  border: 1px solid blue;
+  margin: 0 auto;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .addButton {
